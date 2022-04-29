@@ -15,23 +15,142 @@
   justify-content: center;
   min-height: 100vh;
   background: #ecf0f3;
+  transition: 0.3s;
 }
-.profile-card .wrapper {
+.profile-card :hover .img-area {
+  transform: scale(1.05);
+  transition: transform 0.3s linear;
+}
+.profile-card :hover .img-area-inner {
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+}
+
+.wrapper {
   padding: 30px;
   width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.wrapper,
+.img-area,
+.social-icons a,
+.buttons button {
   background: #ecf0f3;
   border-radius: 10px;
-  box-shadow: -3px -3px 7px #fff, 3px 3px 5px #ceced1;
+  box-shadow: -3px -3px 7px #fff, 3px 3px 5px #ced0d1;
 }
-.profile-card .wrapper .img-area {
+
+.img-area {
   height: 150px;
   width: 150px;
-  border-radius: 10px;
-  box-shadow: -3px -3px 7px #fff, 3px 3px 5px #ceced1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-area-inner {
+  height: calc(100% - 25px);
+  width: calc(100% - 25px);
+}
+.img-area-inner img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 23px;
+  font-weight: 500;
+  color: #31344b;
+  margin: 10px 0 5px 0;
+}
+
+.about {
+  font-weight: 400;
+  color: #44476a;
+  font-size: 20px;
+}
+
+.social-icons {
+  margin: 10px 0 25px 0;
+}
+.social-icons a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  text-decoration: none;
+  margin: 0 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+.social-icons a i {
+  position: relative;
+  z-index: 1;
+}
+.social-icons .fb i {
+  color: #3b5998;
+}
+.social-icons .twitter i {
+  color: #1da1f2;
+}
+.social-icons .instagram i {
+  color: #e1306c;
+}
+.social-icons .linkedin i {
+  color: #0072b1;
+}
+.social-icons :hover {
+  transform: scale(1.3);
+  transition: transform 0.3s linear;
+}
+
+.social-icons a:hover:before,
+.buttons button:hover:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ecf0f3;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 7px #fff, inset 3px 3px 5px #ced0d1;
+}
+
+.buttons button:hover:before {
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.buttons button {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #31344b;
+}
+.buttons button:first-child {
+  margin-right: 10px;
+}
+.buttons button:last-child {
+  margin-left: 10px;
 }
 
 /* Profile Card Style End*//*# sourceMappingURL=style.css.map */
